@@ -5,6 +5,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import axios from 'axios'
 import { useAuth } from './Context/AuthContext';
+import api from "../api.js";
 export default function App() {
 
   // router
