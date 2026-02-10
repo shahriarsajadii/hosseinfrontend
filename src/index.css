@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Lalezar;
+    src: url('/fonts/Lalezar-Regular.ttf');
+}
+
+@font-face {
+    font-family: koodak;
+    src: url('/fonts/B Koodak Bold_0.ttf');
+}
+
+
+
+body {
+    direction: rtl;
+    font-family: koodak;
+    background-color: #f9fafb;
+    overflow-x: hidden;
+}
+
+.lalezar {
+    font-family: Lalezar;
+}
+
+.mainTheme {
+    background: #0a3d12;
+    background: linear-gradient(63deg, rgba(10, 61, 18, 1) 0%, rgba(0, 0, 0, 1) 52%, rgba(10, 61, 18, 1) 100%);
+}
