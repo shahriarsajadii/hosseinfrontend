@@ -5,7 +5,7 @@ import AboutStory from '../Components/AbousUs/AboutStory';
 import AboutTeam from '../Components/AbousUs/AboutTeam';
 import AboutInvite from '../Components/AbousUs/AboutInvite';
 import AnimatedSection from '../AnimatedSection';
-
+console.log("salllammm")
 export default function AboutUs() {
   return (
     <div className="bg-gray-50 min-h-screen  text-gray-800 " dir="rtl">
