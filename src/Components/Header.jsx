@@ -2,6 +2,7 @@ import { FaBars, FaTimes } from "react-icons/fa"; // آیکون‌های جدی�
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuth } from '../Context/AuthContext';
+import api from "../../api.js";
 
 export default function Header() {
 
@@ -11,10 +12,13 @@ export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const gettingData = async () => {
+    const {data} = await api.get('menus')
+    setAllMenus((data))
+  }
+
   useEffect(() => {
-    fetch(`http://localhost:8000/api/menus`)
-      .then(res => res.json())
-      .then(menus => setAllMenus(menus))
+    gettingData()
   }, [])
 
   const closeMenu = () => setIsMenuOpen(false);

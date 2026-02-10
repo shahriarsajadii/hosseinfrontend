@@ -8,6 +8,7 @@ import Notification from '../Components/Notification';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useAuth } from '../Context/AuthContext';
+import api from "../../api.js";
 
 const schema = yup.object().shape({
     username: yup.string().required("وارد کردن نام کاربری الزامی است").min(6, 'تعداد حروف باید حداقل 6 تا باشد').max(12, 'تعداد حروف باید حداکثر 12 حرف باشد'),
@@ -36,7 +37,7 @@ export default function Login() {
 
     async function handleLogin(formData) {
         try {
-            const { data, status } = await axios.post('http://localhost:8000/api/users/login', formData)
+            const { data, status } = await api.post(`users/login`, formData)
             console.log(data);
             setStatusCode(status)
             login(data.user)

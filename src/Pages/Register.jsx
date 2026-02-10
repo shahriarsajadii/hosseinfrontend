@@ -92,7 +92,7 @@ export default function Register() {
                     isOpen={showWelcome}
                     title={`${userInfo.name} خوش آمدی !`}
                     message={`تا ${timer} ثانیه دیگر وارد سایت میشوید`}
-                    icon=<FaLockOpen />
+                    icon={<FaLockOpen />}
                 />
             }
             {
@@ -101,7 +101,7 @@ export default function Register() {
                     isOpen={showWelcome}
                     title={`خطا رخ داد !`}
                     message={`نام کاربری شما قبلا ثبت شده`}
-                    icon=<FaLockOpen />
+                    icon={<FaLockOpen />}
                 />
             }
 

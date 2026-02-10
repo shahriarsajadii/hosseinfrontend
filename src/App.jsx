@@ -21,7 +21,7 @@ export default function App() {
   useEffect(() => {
     const userToken = localStorage.getItem('user')
     const gettingData = async () => {
-      const { data } = await axios.get('http://localhost:8000/api/users/')
+      const { data } = await api.get('users/')
       const user = data.find(user => user.token === userToken)
       user && login(user)
     }

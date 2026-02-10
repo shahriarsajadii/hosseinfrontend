@@ -3,12 +3,13 @@ import CourseCard from '../Cards/CourseCard'
 import SectionHeader from '../SectionHeader'
 import { FaBookOpen } from 'react-icons/fa'
 import axios from 'axios'
+import api from "../../../api.js";
 
 export default function LastCourseContainer() {
 
     const [courses, setCourses] = useState([])
     async function gettingDatas() {
-        const { data } = await axios.get(`http://localhost:8000/api/courses`)
+        const { data } = await api().get(`courses`)
         setCourses(data)
     }
     useEffect(() => {

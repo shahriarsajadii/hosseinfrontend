@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TeamCard from './TeamCard'
 import axios from 'axios'
+import api from "../../../api.js";
 
 export default function AboutTeam() {
 
@@ -9,7 +10,7 @@ export default function AboutTeam() {
     useEffect(() => {
         async function gettingDatas() {
             try {
-                const { data } = await axios.get('http://localhost:8000/api/admins')
+                const { data } = await api.get('admins')
                 setAdmins(data)
             } catch (error) {
                 console.error('Error fetching admins:', error)

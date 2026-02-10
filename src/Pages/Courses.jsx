@@ -4,6 +4,7 @@ import SectionHeader from '../Components/SectionHeader'
 import { FaBookOpen } from 'react-icons/fa'
 import axios from 'axios'
 import PaginationBox from '../Components/PaginationBox'
+import api from "../../api.js";
 
 export default function Courses() {
 
@@ -12,7 +13,7 @@ export default function Courses() {
    
 
     async function gettingDatas() {
-        const { data } = await axios.get(`http://localhost:8000/api/courses`)
+        const { data } = await api.get(`courses`)
         setCourses(data)
     }
     useEffect(() => {

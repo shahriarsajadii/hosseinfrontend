@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ArticleCard from '../Cards/ArticleCard'
 import axios from 'axios'
+import api from "../../../api.js";
 
 export default function LastArticlesContainer() {
 
@@ -8,7 +9,7 @@ export default function LastArticlesContainer() {
 
 
     async function gettingDatas() {
-        const { data } = await axios.get(`http://localhost:8000/api/articles`)
+        const { data } = await api.get(`articles`)
         setArticles(data)
     }
     useEffect(() => {
