@@ -9,7 +9,7 @@ export default function LastCourseContainer() {
 
     const [courses, setCourses] = useState([])
     async function gettingDatas() {
-        const { data } = await api().get(`courses`)
+        const { data } = await api.get(`courses`)
         setCourses(data)
     }
     useEffect(() => {
