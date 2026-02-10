@@ -24,7 +24,6 @@ const routes = [
     { path: '/signup', element: <Register /> },
     { path: '/courses', element: <Courses /> },
     { path: '/articles', element: <Articles /> },
-    { path: '/search/:value', element: <Search /> },
     { path: '/about', element: <AboutUs /> },
     { path: '/payment', element: <PaymentPage /> },
 
